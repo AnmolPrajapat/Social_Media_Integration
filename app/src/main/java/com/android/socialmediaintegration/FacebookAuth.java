@@ -36,8 +36,6 @@ import java.util.Arrays;
 
 public class FacebookAuth extends MainActivity {
     CallbackManager callbackManager;
-//    FirebaseAuth mAuth;
-//    FirebaseDatabase database;
     GraphRequest request;
 
     @Override
@@ -101,16 +99,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data) {
                     i.putExtra("email", email);
                     i.putExtra("img",img_url);
                     startActivity(i);
-//
-//                    if(response!= null){
-//                        FacebookRequestError error = response.getError();
-//                        if (error!= null){
-//                            Log.e("TAG",error.toString());
-//                        }
-//                        else{
-//                            finish();
-//                        }
-//                    }
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();

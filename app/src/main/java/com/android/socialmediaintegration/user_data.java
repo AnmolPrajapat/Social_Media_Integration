@@ -28,53 +28,6 @@ public class user_data extends AppCompatActivity {
     FirebaseAuth auth;
     GoogleSignInClient mGoogleSignInClient ;
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater infalter = getMenuInflater();
-//        infalter.inflate(R.menu.menu_xml,menu);
-//        return true;
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        switch (item.getItemId()){
-//            case R.id.logout :
-////                Intent  i = new Intent(user_data.this,MainActivity.class);
-////                startActivity(i);
-////                return true;
-//
-////                    auth.signOut();
-////                    LoginManager.getInstance().logOut();
-////                    startActivity(new Intent(user_data.this,MainActivity.class));
-//
-////
-//
-//
-//            case R.id.Exit_App:
-//                fun();
-//                return true;
-//
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
-//    public void fun(){
-//        AlertDialog.Builder builder = new AlertDialog.Builder(user_data.this);
-//        builder.setTitle("Are you want to exit from the app")
-//                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        Intent in = new Intent(Intent.ACTION_MAIN);
-//                        in.addCategory(Intent.CATEGORY_HOME);
-//                        startActivity(in);
-//                        finish();
-//                        System.exit(0);
-//                    }
-//                })
-//                .setNegativeButton("No",null).setCancelable(false);
-//        AlertDialog alert = builder.create();
-//        alert.show();
-//
-//    }
 
     @Override
     public boolean onSupportNavigateUp() {
