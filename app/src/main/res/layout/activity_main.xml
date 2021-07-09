@@ -83,7 +83,7 @@
                 android:textColor="@color/black"
                 android:textColorHighlight="#FFFFFF"
                 android:textSize="15sp"
-                app:backgroundTint="@color/white" />
+                app:backgroundTint="@color/platinum" />
 
             <TextView
                 android:id="@+id/hyper_Link"

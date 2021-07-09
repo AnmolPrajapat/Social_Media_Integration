@@ -108,7 +108,7 @@ public class user_data extends AppCompatActivity {
         binding = ActivityUserDataBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         auth = FirebaseAuth.getInstance();
-        getSupportActionBar().setTitle("");
+        getSupportActionBar().setTitle("Profile");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
@@ -127,16 +127,27 @@ public class user_data extends AppCompatActivity {
             binding.userEmail.setText(email);
             Glide.with(this).load(photo).into(binding.profileImage);
 
-            binding.logOut.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    auth.signOut();
-                    mGoogleSignInClient = GoogleSignIn.getClient(user_data.this,gso);
-                    mGoogleSignInClient.signOut();
-                    startActivity(new Intent(user_data.this,MainActivity.class));
-                }
-            });
 
         }
+        else {
+            Intent intent = getIntent();
+            String Fname = intent.getStringExtra("fn");
+            String Lname = intent.getStringExtra("ln");
+            String email = intent.getStringExtra("email");
+            String img = intent.getStringExtra("img");
+
+            binding.userName.setText(Fname + " "+ Lname);
+            binding.userEmail.setText(email);
+            Glide.with(this).load(img).into(binding.profileImage);
+        }
+        binding.logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                mGoogleSignInClient = GoogleSignIn.getClient(user_data.this,gso);
+                mGoogleSignInClient.signOut();
+                startActivity(new Intent(user_data.this,MainActivity.class));
+            }
+        });
     }
 }

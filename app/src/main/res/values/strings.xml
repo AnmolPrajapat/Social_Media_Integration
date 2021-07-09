@@ -8,6 +8,7 @@
     <string name="copy_right"> \@ 2021 Anmol for The Sparks Foundation</string>
     <string name="user_name">Name</string>
     <string name="User_email">Email</string>
+    <string name="logout">Logout</string>
     <string name="facebook_app_id">813714219285530</string>
     <string name="fb_login_protocol_scheme">fb813714219285530</string>
     <string name="hyper_link">By clicking on login, you are accepting our <b><i> <a href="https://tsf.flycricket.io/privacy.html">Privacy policy</a></i></b> And <b><i> <a href="https://tsf.flycricket.io/terms.html">Terms and Condtions</a></i></b></string>

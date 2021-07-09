@@ -1,97 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".user_data"
-    android:orientation="vertical"
-    android:layout_gravity="center">
-<!--    @tools:sample/avatars-->
-    <ScrollView
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="30dp">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <LinearLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_height="150dp"
+            android:background="#4267B2"
+            android:padding="20dp"></RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-95dp"
+            android:src="@drawable/ic_launcher_background"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginRight="100dp"
+            android:background="@color/black" />
+
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
             android:gravity="center"
-            android:layout_margin="20dp">
+            android:text="@string/user_name"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#D7F6FA"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profile_image"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:layout_marginTop="60dp"
-                    android:src="@drawable/ic_launcher_background"
-                    app:civ_border_color="#FF000000"
-                    app:civ_border_width="2dp" />
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:layout_marginStart="100dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="100dp"
-                    android:layout_marginRight="100dp"
-                    android:background="@color/black" />
-            </LinearLayout>
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="@string/User_email"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
-            <TextView
-                android:id="@+id/user_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:gravity="center"
-                android:text="@string/user_name"
-                android:textColor="#F3A19A"
-                android:textSize="16sp"
-                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/user_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:gravity="center"
-                android:text="@string/User_email"
-                android:textColor="#F3A19A"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/logOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/btn_cutomise"
+            android:text="@string/logout"
+            android:textColor="@color/black"
+            android:textColorHighlight="#FFFFFF"
+            android:textSize="15sp"
+            app:backgroundTint="@color/purple_500" />
 
-            <TextView
-                android:id="@+id/logOut"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="170dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:text="Logout"
-                android:textColor="#F40707"
-                android:textSize="17sp" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
